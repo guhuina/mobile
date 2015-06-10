@@ -1,7 +1,7 @@
 #移动端项目常用代码
 
 
-## CSS Mobile Reset
+## CSS 
 > Reset and Set the basic CSS for mobile phones.
 
 ### 去除ios a标签被点击时产生的半透明灰色背景 
@@ -14,8 +14,26 @@
 	@media all and (-webkit-transform-3d){
 		.css{}
 	}
-	
-## temp
+
+### 防止横竖屏切换时文本自动缩放
+
+	body{-webkit-text-size-adjust:none;}
+
+
+### 横屏、竖屏的样式判断
+
+	@media all and (orientation : landscape) { /*这是匹配横屏的状态，横屏时的css代码*/
+		body { 
+		 
+		} 
+	} 
+	@media all and (orientation : portrait){ /*这是匹配竖屏的状态，竖屏时的css代码*/
+		body { 
+			background-color: #00ff00; 
+		} 
+	} 
+
+## HTML
 
 > HTML5 module for mobile phones.
 
@@ -55,7 +73,11 @@
 	
 	<meta name="format-detection" content="telephone=no"/>
 	
-	
+### 链接拨号和发短讯
+
+	<a href="tel:12345654321">打电话给我</a>
+	<a href="sms:12345654321">发短信</a>
+
 ## 在线调试
 
 ### [Android with Chrme](https://developer.chrome.com/devtools/docs/remote-debugging)
